@@ -1,0 +1,16 @@
+
+with System;
+package Prg_Under_Tst is
+
+    Priorite : constant System.Priority := 3;
+
+    task type Prioritaire is
+	pragma Priority (Priorite);
+
+	entry Do_Something_Useful (Param_Une : in Duration);
+	entry Unit_Testing_Exit_Loop;
+	entry Unit_Testing_Wait_Termination;
+    end Prioritaire;
+
+    procedure Attol_Test;
+end Prg_Under_Tst;
